@@ -17,7 +17,7 @@ namespace Box.V2.JWTAuth
         /// <summary>
         /// Box Authentication using a JSON Web Token (JWT)
         /// </summary>
-        public BoxJWTAuth BoxJWTAuth { get; private set; }
+        public IBoxJWTAuth BoxJWTAuth { get; private set; }
 
         /// <summary>
         /// Id of the user
@@ -40,7 +40,7 @@ namespace Box.V2.JWTAuth
         /// <param name="session">OAuth session</param>
         /// <param name="boxJWTAuth">JWT authentication</param>
         /// <param name="userId">Id of the user</param>
-        public JWTAuthRepository(OAuthSession session, BoxJWTAuth boxJWTAuth, string userId = null)
+        public JWTAuthRepository(OAuthSession session, IBoxJWTAuth boxJWTAuth, string userId = null)
         {
             this.Session = session;
             this.BoxJWTAuth = boxJWTAuth;

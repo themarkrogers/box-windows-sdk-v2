@@ -24,7 +24,7 @@ namespace Box.V2.JWTAuth
     ///<remarks>
     ///https://docs.box.com/docs/getting-started-box-platform
     ///</remarks>
-    public class BoxJWTAuth
+    public class BoxJWTAuth : IBoxJWTAuth
     {
         const string AUTH_URL = "https://api.box.com/oauth2/token";
         const string ENTERPRISE_SUB_TYPE = "enterprise";
